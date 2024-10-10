@@ -3,8 +3,6 @@ This is document outlines the testing procedures and how to run this go applicat
 
 *Note* the Following appication will not convert all csv files into JSON files and will only work with housing data fomatted as menntioned in [this section](#CSV-Specifications)
 
-
-
 **Assignment Scenario**
 A data science consulting firm would like to have a utility for converting comma-delimited text (comma-separated values, csv) to JavaScript Object Notation (JSON).  The JSON lines file represents a common file format for populating databases and document stores.
 
