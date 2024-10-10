@@ -1,7 +1,9 @@
 # MSDS 431 - Creating a Command-Line Application
 This is document outlines the testing procedures and how to run this go application. The intended use of the executable is to convert housing data into a json file.
 
-*Note* the Following appication will not convert all csv files into JSON files and will only work with housing data fomatted as menntioned in [this section](CSV Specifications)
+*Note* the Following appication will not convert all csv files into JSON files and will only work with housing data fomatted as menntioned in [this section](#CSV-Specifications)
+
+
 
 **Assignment Scenario**
 A data science consulting firm would like to have a utility for converting comma-delimited text (comma-separated values, csv) to JavaScript Object Notation (JSON).  The JSON lines file represents a common file format for populating databases and document stores.
