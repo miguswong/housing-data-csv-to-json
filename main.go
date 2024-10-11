@@ -98,21 +98,7 @@ func fileExists(filename string) bool {
 	return !os.IsNotExist(err)
 }
 
-func main() {
-
-	if len(os.Args) != 3 {
-		log.Fatal("Please ensure there are 2 arguments provided. The first argumment should be your csv file (including .csv). The second argument should be the desired JSON filename (including.json)")
-	}
-
-	inputArg := os.Args[1]
-	outputArg := os.Args[2]
-
-	//Begin with input validation checks//
-	// cwd, err := os.Getwd()
-	// if err != nil {
-	// 	log.Fatal(err)
-	// }
-
+func argChecks(inputArg string, outputArg string) (string, string) {
 	absOutput, err := filepath.Abs(outputArg)
 	if err != nil {
 		log.Fatal(err)
@@ -131,6 +117,19 @@ func main() {
 	if !fileExists(inputArg) {
 		log.Fatal("Unable to find ", absInput, "\n please ensure your file is named correctly")
 	}
+	return absInput, absOutput
+}
+
+func main() {
+
+	if len(os.Args) != 3 {
+		log.Fatal("Please ensure there are 2 arguments provided. The first argumment should be your csv file (including .csv). The second argument should be the desired JSON filename (including.json)")
+	}
+
+	inputArg := os.Args[1]
+	outputArg := os.Args[2]
+
+	_, absOutput := argChecks(inputArg, outputArg)
 
 	//Open input csv file
 	f, err := os.Open(inputArg)
