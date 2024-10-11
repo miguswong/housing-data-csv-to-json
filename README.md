@@ -51,7 +51,7 @@ To run the executable, use the following command ```HousingConversion [InputFile
     * _assuming the the csv is stored in the same working directory as the executable_
 * ```[OutputFilePath]``` represents the generated JSON file name. Similar to [InputFilePath], if the absolute path of where you would like the file to be generated is not provided, the default behaviour will be to use the directory where the executable is stored
 
-Puttint it all together, the follwing command would convert housing data from CSV to JSON assuming both input and output files are stored in the same location as the executable:
+Putting it all together, the following command would convert housing data from CSV to JSON assuming both input and output files are stored in the same location as the executable:
 
 ```HousingConversion housesInput.csv outputData.json```
 
@@ -60,6 +60,8 @@ Alternatively, this would achieve the same exact outcome:
 ```HousingConversion "C:\Users\migus\OneDrive\Documents\Desktop\housesInput.csv" "C:\Users\migus\OneDrive\Documents\Desktop\outputData.json\```
 
 ## Testing the Application
-### Valid User Inputs
-### Input/Output File Validation
+Unit tests were created to ensure that checking file paths for both input CSVs and output JSON files was functioning correctly. The second unit test double checks that functionality around the conversion of csv data into structs is completed correctly.
+
+Unit tests can be found [here](https://github.com/miguswong/housing-data-csv-to-json/blob/master/main_test.go)
+
 
