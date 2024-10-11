@@ -109,7 +109,7 @@ func argChecks(inputArg string, outputArg string) (string, string) {
 		log.Fatal(err)
 	}
 
-	//Check whether or not the given output filename actually exist
+	//Check whether or not the given input filename actually exists and the output also exists.
 	if fileExists(outputArg) {
 		log.Fatal(absOutput, " already exists.\nPlease choose a different output file name.")
 	}
